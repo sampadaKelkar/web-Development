@@ -1,0 +1,71 @@
+body{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #0e0707;
+    color: #fff;
+}
+
+#gameArea{
+    width: 400px;
+    height: 400px;
+    background: #263c74;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+}
+
+#player{
+    position: absolute;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enemy{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    line-height: 1;
+    background: transparent;
+}
+
+#controls button{
+    margin: 5px;
+    padding: 10px;
+}
+
+#startBtn{
+    padding:10px 20px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* hit animation */
+.hit{
+    animation: shake 0.3s;
+}
+
+@keyframes shake{
+    0%{transform:translateX(0)}
+    25%{transform:translateX(-5px)}
+    50%{transform:translateX(5px)}
+    75%{transform:translateX(-5px)}
+    100%{transform:translateX(0)}
+}
+
+/* score animation */
+.pop{
+    animation: pop 0.3s;
+}
+
+@keyframes pop{
+    0%{transform:scale(1)}
+    50%{transform:scale(1.5)}
+    100%{transform:scale(1)}
+}

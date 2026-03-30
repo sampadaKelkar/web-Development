@@ -1,0 +1,112 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    color: #100e0e;
+    font-size: 25px;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Common Section Styling */
+.section {
+   background-color:rgb(248, 241, 249);  
+    margin: 30px auto;
+    padding: 25px 30px;
+    width: 70%;
+    border-radius: 25px;
+    box-shadow: 0 8px 18px rgba(139, 81, 241, 0.865);
+}
+
+/* Headings */
+.section h2 {
+    color: #111e2e;
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 6px;
+}
+
+/* Profile Section */
+.profile-section {
+    position: relative;
+}
+
+.profile-photo {
+    width: 2000px;
+    height: 200px;
+    border-radius: 50%;
+    float: right;
+    margin-left: 25px;
+    object-fit: cover;
+    border: 4px solid #1a73e8;
+}
+
+.name {
+    margin-top: 0;
+    font-size: 34px;
+}
+
+/* Text spacing */
+p {
+    margin: 6px 0;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Links */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*flip dp*/
+.dp-container{
+    perspective:1000px; /*for 3d view*/
+    width:180px;
+    height:180px;
+    margin:20px auto;
+}
+
+.dp-card{
+    align-items:center;
+    width:100%;
+    height:100%;
+    position:relative;
+    transition:transform 0.6s;
+    transform-style:preserve-3d;
+    cursor:pointer;
+}
+
+.dp-container:hover .dp-card{
+    transform:rotateY(180deg);
+}
+
+.dp-card img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    backface-visibility:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    object-fit:cover;
+    border:3px solid #1a73e8;
+}
+
+.dp-card .back{
+    transform:rotateY(180deg); 
+}

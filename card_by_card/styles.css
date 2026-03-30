@@ -1,0 +1,313 @@
+/* Color Palette */
+:root {
+    --bg-dark: #020617;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --accent-blue: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.3);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: sticky;
+    top: 40px;
+    height: fit-content;
+    text-align: center;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-blue), #818cf8);
+    border-radius: 20px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--bg-dark);
+}
+
+.subtitle {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.contact-info {
+    text-align: left;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.contact-info div {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: var(--accent-blue);
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-blue);
+}
+
+.btn-download {
+    display: block;
+    margin-top: 30px;
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+/* Main Grid Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-blue);
+}
+
+/* Skills Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: var(--accent-blue);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+/* Timeline */
+.timeline {
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.project-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--accent-blue);
+}
+
+.flip-hint {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.flip-card:hover .flip-hint {
+    opacity: 1;
+}
+
+/* FLIP CARD CORE (pure CSS click flip) */
+.flip-card {
+    perspective: 1000px;
+    position: relative;
+    min-height: 280px;
+}
+
+/* Hide the checkbox visually */
+.flip-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Inner wrapper that will rotate */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    min-height: 280px;
+}
+
+/* Front and back faces */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    width: 100%;
+    min-height: 280px;
+}
+
+/* Back side is rotated */
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* When checkbox is checked, rotate inner wrapper */
+.flip-card input[type="checkbox"]:checked + .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+    cursor: pointer;
+}
+
+/* Certifications */
+.cert-list {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.cert-list p {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cert-list span {
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-width: 45px;
+    text-align: center;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .full-width {
+        grid-column: span 1;
+    }
+    .sidebar {
+        position: relative;
+        top: 0;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

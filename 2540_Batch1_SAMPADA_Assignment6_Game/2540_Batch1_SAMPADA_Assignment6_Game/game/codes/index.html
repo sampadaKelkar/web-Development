@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Santa Dodge</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>Santa Dodge...!</h1>
+<p>Time: <span id="timer">0</span></p>
+<p>Score: <span id="score">0</span></p>
+<p>Lives: <span id="lives">❤️❤️❤️</span></p>
+
+<button id="startBtn">Go Live 🚀</button>
+<button id="pauseBtn" style="display:none">Pause ⏸️</button>
+<button id="muteBtn" style="display:none">Mute 🔈</button>
+<button id="showScoresBtn">High Scores 🏆</button>
+
+<div id="gameArea">
+    <div id="player">☃️</div>
+</div>
+
+<div id="highScores" style="display:none; max-width:400px; margin:0 auto; text-align:left; color:#fff;">
+    <h2>Top Scores</h2>
+    <ol id="scoresList"></ol>
+    <button id="closeScores">Close</button>
+</div>
+
+<div id="controls">
+    <button onclick="move('up')">Up</button>
+    <button onclick="move('down')">Down</button>
+    <button onclick="move('left')">Left</button>
+    <button onclick="move('right')">Right</button>
+</div>
+
+<!-- GAME OVER MODAL -->
+<div id="gameOverModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">GAME OVER</div>
+        <div class="modal-body">
+            <div class="score-display">
+                <p class="label">Final Score</p>
+                <p class="score-value" id="finalScore">0</p>
+            </div>
+            <div class="game-stats">
+                <p>Time Survived: <span id="finalTime">0</span>s</p>
+                <p>Lives Lost: 3</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="restartBtn" class="btn-restart">Play Again 🎮</button>
+            <button id="otherGamesBtn" class="btn-other">Play Mini Games 🎯</button>
+        </div>
+    </div>
+</div>
+
+<!-- AUDIO -->
+<audio id="bgMusic" preload="auto">
+     <source src="background.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="collisionSound" preload="auto">
+     <source src="button-2.wav" type="audio/wav">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

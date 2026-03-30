@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="W3Schools CSS Tutorial - Learn CSS from basic to advanced">
+  <meta name="theme-color" content="#04AA6D">
+  <title>CSS Tutorial - W3Schools Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP HEADER -->
+<header class="top-header">
+  <button class="menu-btn" id="menuToggle" aria-label="Toggle Menu">&#9776;</button>
+  <h2 class="logo">W3Schools</h2>
+  <nav class="top-nav">
+    <a href="#tutorials" class="nav-link">Tutorials</a>
+    <a href="#references" class="nav-link">References</a>
+    <a href="#exercises" class="nav-link">Exercises</a>
+    <a href="#videos" class="nav-link">Videos</a>
+    <a href="#upgrade" class="nav-link upgrade-btn">Upgrade</a>
+    <input type="text" class="search-box" placeholder="Search...">
+  </nav>
+</header>
+
+<!-- GREEN NAV BAR -->
+<nav class="main-nav" id="mainNav">
+  <a class="nav-item">HTML</a>
+  <a class="nav-item active">CSS</a>
+  <a class="nav-item">JavaScript</a>
+  <a class="nav-item">SQL</a>
+  <a class="nav-item">Python</a>
+  <a class="nav-item">Java</a>
+  <a class="nav-item">PHP</a>
+  <a class="nav-item">Bootstrap</a>
+  <a class="nav-item">React</a>
+  <a class="nav-item">MySQL</a>
+  <a class="nav-item hide-mobile">C</a>
+  <a class="nav-item hide-mobile">C++</a>
+  <a class="nav-item hide-mobile">C#</a>
+  <a class="nav-item hide-mobile">R</a>
+  <a class="nav-item hide-mobile">Go</a>
+  <a class="nav-item hide-mobile">Node.js</a>
+  <a class="nav-item hide-tablet">XML</a>
+  <a class="nav-item hide-tablet">DSA</a>
+  <a class="nav-item hide-tablet">Pandas</a>
+  <a class="nav-item hide-tablet">Numpy</a>
+  <a class="nav-item hide-tablet">TypeScript</a>
+  <a class="nav-item hide-tablet">Kotlin</a>
+  <a class="nav-item hide-tablet">AI</a>
+  <a class="nav-item hide-tablet">Swift</a>
+  <a class="nav-item more-btn">More ▼</a>
+</nav>
+
+<!-- PAGE LAYOUT -->
+<div class="layout">
+
+  <!-- LEFT SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <button class="close-btn" id="closeBtn" aria-label="Close Menu">&times;</button>
+    
+    <h3>CSS Tutorial</h3>
+
+    <a class="sidebar-link active">CSS Home</a>
+    <a class="sidebar-link">CSS Introduction</a>
+    <a class="sidebar-link">CSS Syntax</a>
+    <a class="sidebar-link">CSS Selectors</a>
+    <a class="sidebar-link">CSS How To</a>
+    <a class="sidebar-link">CSS Comments</a>
+    <a class="sidebar-link">CSS Colors</a>
+    <a class="sidebar-link">CSS Backgrounds</a>
+    <a class="sidebar-link">CSS Borders</a>
+    <a class="sidebar-link">CSS Margins</a>
+    <a class="sidebar-link">CSS Padding</a>
+    <a class="sidebar-link">CSS Height / Width</a>
+    <a class="sidebar-link">CSS Box Model</a>
+    <a class="sidebar-link">CSS Outline</a>
+    <a class="sidebar-link">CSS Text</a>
+    <a class="sidebar-link">CSS Fonts</a>
+    <a class="sidebar-link">CSS Icons</a>
+    <a class="sidebar-link">CSS Links</a>
+    <a class="sidebar-link">CSS Lists</a>
+    <a class="sidebar-link">CSS Tables</a>
+    <a class="sidebar-link">CSS Display</a>
+    <a class="sidebar-link">CSS Position</a>
+    <a class="sidebar-link">CSS Overflow</a>
+    <a class="sidebar-link">CSS Float</a>
+    <a class="sidebar-link">CSS Inline-block</a>
+    <a class="sidebar-link">CSS Align</a>
+    <a class="sidebar-link">CSS Combinators</a>
+    <a class="sidebar-link">CSS Pseudo-class</a>
+    <a class="sidebar-link">CSS Pseudo-element</a>
+    <a class="sidebar-link">CSS Opacity</a>
+    <a class="sidebar-link">CSS Navigation Bar</a>
+    <a class="sidebar-link">CSS Dropdowns</a>
+    <a class="sidebar-link">CSS Image Gallery</a>
+    <a class="sidebar-link">CSS Image Sprites</a>
+    <a class="sidebar-link">CSS Attr Selectors</a>
+    <a class="sidebar-link">CSS Forms</a>
+    <a class="sidebar-link">CSS Counters</a>
+    <a class="sidebar-link">CSS Website Layout</a>
+    <a class="sidebar-link">CSS Units</a>
+    <a class="sidebar-link">CSS Specificity</a>
+    <a class="sidebar-link">CSS !important</a>
+    <a class="sidebar-link">CSS Math Functions</a>
+
+    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ccc;">
+
+    <h3>CSS Advanced</h3>
+    <a class="sidebar-link">CSS Flexbox</a>
+    <a class="sidebar-link">CSS Grid</a>
+    <a class="sidebar-link">CSS Transitions</a>
+    <a class="sidebar-link">CSS Transforms</a>
+    <a class="sidebar-link">CSS Animations</a>
+    <a class="sidebar-link">CSS Media Queries</a>
+    <a class="sidebar-link">CSS Variables</a>
+  </aside>
+
+  <!-- OVERLAY FOR MOBILE -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <p class="breadcrumb">Home &gt; CSS Tutorial</p>
+
+    <h1>CSS Tutorial</h1>
+    <p class="intro">
+      CSS is the language we use to style an HTML document.<br>
+      CSS describes how HTML elements should be displayed.
+    </p>
+
+    <button class="main-btn">Start learning CSS now »</button>
+    <p class="tip">💡 Tip: Sign in to track your progress.</p>
+
+    <!-- WHAT IS CSS -->
+    <section class="box">
+      <h2>What is CSS?</h2>
+      <p>CSS is the language we use to style web pages.</p>
+      <ul>
+        <li>CSS stands for Cascading Style Sheets</li>
+        <li>CSS describes how HTML elements are displayed</li>
+        <li>CSS saves a lot of work</li>
+        <li>CSS can control the layout of multiple web pages at once</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Why Use CSS?</h2>
+      <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices.</p>
+    </section>
+
+    <section class="box">
+      <h2>CSS Solved a Big Problem</h2>
+      <p>HTML was NEVER intended to contain tags for formatting a web page.</p>
+      <p>CSS was created to solve this problem!</p>
+    </section>
+
+    <section class="box">
+      <h2>CSS Saves a Lot of Work!</h2>
+      <p>With an external stylesheet file, you can change the look of an entire website by changing just one file.</p>
+    </section>
+
+    <!-- EXAMPLES IN EACH CHAPTER -->
+    <section class="box">
+      <h2>Examples in Each Chapter</h2>
+      <p>This CSS tutorial contains over 700 CSS examples. With our online editor, you can edit the CSS and view the result.</p>
+    </section>
+
+    <!-- CSS EXAMPLE -->
+    <section class="example">
+      <h2>CSS Examples</h2>
+      <pre><code>body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}</code></pre>
+      <button class="try-btn">Try it Yourself »</button>
+    </section>
+
+    <!-- USE THE MENU -->
+    <section class="box">
+      <h2>Use the Menu</h2>
+      <p>Read the tutorial in the order shown in the menu.</p>
+    </section>
+
+    <!-- CSS TEMPLATES -->
+    <section class="box">
+      <h2>CSS Templates</h2>
+      <p>Use ready-made responsive templates to quickly start your own website projects.</p>
+      <button class="secondary-btn">Free CSS Templates</button>
+    </section>
+
+    <!-- CSS EXERCISES -->
+    <section class="box">
+      <h2>CSS Exercises</h2>
+      <p>Practice at the end of each chapter to test your knowledge of the topic.</p>
+
+      <div class="exercise">
+        <h3>Exercise</h3>
+        <p>Drag and drop the correct property to set a green background color for a div element.</p>
+        <pre><code>div {
+    ____: green;
+}</code></pre>
+        <div class="options">
+          <span class="option">bg-color</span>
+          <span class="option">color</span>
+          <span class="option">opacity</span>
+          <span class="option correct">background-color</span>
+        </div>
+        <button class="secondary-btn">Submit Answer</button>
+        <button class="link-btn">See all CSS Exercises</button>
+      </div>
+    </section>
+
+    <!-- CSS QUIZ -->
+    <section class="box">
+      <h2>CSS Quiz</h2>
+      <p>Test your CSS skills and find out how much you have learned.</p>
+      <button class="secondary-btn">Start CSS Quiz</button>
+    </section>
+
+    <!-- TRACK YOUR PROGRESS -->
+    <section class="box">
+      <h2>Track Your Progress</h2>
+      <p>Create a free account to track completed tutorials, exercises, and quizzes.</p>
+      <p>Keep an eye on your progress, daily streaks, and unlock fun rewards.</p>
+      <button class="main-btn">Sign Up</button>
+    </section>
+
+    <!-- CSS REFERENCES -->
+    <section class="box">
+      <h2>CSS References</h2>
+      <p>Find complete references for all CSS properties, selectors, and other syntax.</p>
+      <div class="ref-links">
+        <span>CSS Properties</span>
+        <span>CSS Selectors</span>
+        <span>CSS Functions</span>
+        <span>CSS Units</span>
+        <span>CSS Colors</span>
+      </div>
+    </section>
+
+    <!-- POPULAR TOPICS -->
+    <section class="box">
+      <h2>Popular CSS Topics</h2>
+      <ul>
+        <li><strong>Flexbox:</strong> Create flexible and responsive layouts</li>
+        <li><strong>CSS Grid:</strong> Build grid-based two-dimensional layouts</li>
+        <li><strong>Transitions:</strong> Smooth animated property changes</li>
+        <li><strong>Transforms:</strong> Rotate, scale, skew, and translate elements</li>
+        <li><strong>Animations:</strong> Create complex keyframe animations</li>
+        <li><strong>Media Queries:</strong> Responsive design for all devices</li>
+        <li><strong>Custom Properties:</strong> CSS variables for reusable values</li>
+        <li><strong>Pseudo-classes:</strong> Style elements based on state</li>
+      </ul>
+    </section>
+
+    <!-- LEARN BY EXAMPLES -->
+    <section class="box">
+      <h2>Learn by Examples</h2>
+      <p>Each chapter breaks down into easy to understand chunks of CSS. With our "Try it Yourself" editor, you can edit the CSS and click a button to view the result.</p>
+      <button class="secondary-btn">View All CSS Examples</button>
+    </section>
+
+    <!-- COLOR PALETTE -->
+    <section class="box">
+      <h2>CSS Colors</h2>
+      <p>Colors can be specified in several different ways:</p>
+      <div class="color-grid">
+        <div class="color-box" style="background-color: #ff0000;">Red - #ff0000</div>
+        <div class="color-box" style="background-color: #00ff00;">Green - #00ff00</div>
+        <div class="color-box" style="background-color: #0000ff;">Blue - #0000ff</div>
+        <div class="color-box" style="background-color: #ffff00;">Yellow - #ffff00</div>
+      </div>
+    </section>
+
+    <!-- PRACTICE -->
+    <section class="box">
+      <h2>Test Your Skills</h2>
+      <p>With our "Try it Yourself" editor, you can edit CSS code and view the results in real time:</p>
+      <button class="secondary-btn">Go to CSS Exercises</button>
+    </section>
+
+    <!-- CERTIFICATION -->
+    <section class="box highlight-box">
+      <h2>Get Certified</h2>
+      <p>Get certified in CSS to add a strong credential to your resume.</p>
+      <p>Learn, practice, and get certified. Get certified today to showcase your knowledge to employers.</p>
+      <button class="main-btn">Get CSS Certified</button>
+    </section>
+
+    <!-- NAVIGATION BUTTONS -->
+    <div class="bottom-nav">
+      <button class="nav-btn prev-btn">❮ Previous</button>
+      <button class="nav-btn next-btn">Next ❯</button>
+    </div>
+
+  </main>
+
+  <!-- RIGHT SIDEBAR - BOOTCAMPS & ADS -->
+  <aside class="right-sidebar">
+    <div class="bootcamp-section">
+      <h3>W3Schools Bootcamp</h3>
+      <p>Learn Full Stack Development with our comprehensive bootcamp program.</p>
+      <button class="secondary-btn">Learn More →</button>
+    </div>
+
+    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+
+    <div class="bootcamp-section">
+      <h3>CSS Certification</h3>
+      <p>Get certified in CSS and showcase your skills to employers.</p>
+      <button class="secondary-btn">Get Certified →</button>
+    </div>
+
+    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+
+    <div class="bootcamp-section">
+      <h3>W3Schools Pro</h3>
+      <p>Remove ads, unlock premium features, and track your progress.</p>
+      <button class="main-btn">Upgrade to Pro</button>
+    </div>
+
+    <hr style="margin: 15px 0; border: none; border-top: 1px solid #ddd;">
+
+    <div class="bootcamp-section">
+      <h3>Popular Resources</h3>
+      <ul style="list-style: none; margin: 0; padding: 0;">
+        <li><a href="#">HTML Tutorial</a></li>
+        <li><a href="#">JavaScript Guide</a></li>
+        <li><a href="#">Python Basics</a></li>
+        <li><a href="#">SQL Database</a></li>
+        <li><a href="#">Bootstrap Framework</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>REPORT AN ISSUE</h4>
+      <p>Did we help you? Please let us know how we can improve this web app.</p>
+    </div>
+    <div class="footer-section">
+      <h4>ABOUT W3SCHOOLS</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Advertise</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 1999–2026 W3Schools Clone | Made Responsive with Mobile-First Approach</p>
+  </div>
+</footer>
+
+</body>
+</html>

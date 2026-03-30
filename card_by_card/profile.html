@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sampada Kelkar | Portfolio</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar glass-card">
+        <div class="profile-img">SK</div>
+        <h1>Sampada Kelkar</h1>
+        
+        <div class="contact-info">
+            <div><i class="fa-solid fa-calendar"></i> 08/12/2003</div>
+            <div><i class="fa-solid fa-envelope"></i> sampada1924@gmail.com</div>
+            <div><i class="fa-solid fa-phone"></i> (+91) 8275075676</div>
+            <div><i class="fa-solid fa-location-dot"></i> Valpoi, Sattari, Goa</div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <a href="C:\Users\sampa\OneDrive\Documents\Sampada_Resume.docx" class="btn-download" download>
+            Download Resume <i class="fa-solid fa-file-pdf"></i>
+        </a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        
+        <!-- EDUCATION -->
+        <section class="glass-card full-width">
+            <h2><i class="fa-solid fa-user-graduate"></i> Academic Qualifications</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>MCA (Pursuing)</h3>
+                    <p>Goa University</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>B.Sc. (Hons) Computer Science</h3>
+                    <p>GCASCS, Sanquelim | CGPA: 8.84 | 87.69%</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>HSSC - Science</h3>
+                    <p>Our Lady of Lourdes HSS (2022) | 69.50%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="glass-card">
+            <h2><i class="fa-solid fa-code"></i> Technical Skills</h2>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">C</span>
+                <span class="tag">Assembly</span>
+                <span class="tag">HTML5/CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Android Studio</span>
+                <span class="tag">Arduino</span>
+            </div>
+        </section>
+
+        <!-- INTERESTS -->
+        <section class="glass-card">
+            <h2><i class="fa-solid fa-pen-nib"></i> Interests</h2>
+            <ul class="interest-list">
+                <li>Poetry Writing</li>
+                <li>Culinary Arts (Cooking)</li>
+                <li>Community Engagement</li>
+            </ul>
+        </section>
+
+        <!-- PROJECTS with FLIP CARDS -->
+        <section class="glass-card full-width">
+            <h2><i class="fa-solid fa-laptop-code"></i> Key Projects</h2>
+            <div class="project-grid">
+
+                <!-- CARD 1 -->
+                <div class="flip-card">
+                    <input type="checkbox" id="proj1">
+                    <label for="proj1" class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-card">
+                                <div class="project-icon"><i class="fa-solid fa-car"></i></div>
+                                <h3>Smart Parking System</h3>
+                                <p>IoT-based solution for automated parking management.</p>
+                                <div class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Click to flip</div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-card">
+                                <h3>Smart Parking System</h3>
+                                <p>Uses QR codes, sensors, and camera modules to track vehicles, automate slot allocation, and generate entry/exit logs.</p>
+                                <div class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Click to flip</div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="flip-card">
+                    <input type="checkbox" id="proj2">
+                    <label for="proj2" class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-card">
+                                <div class="project-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                                <h3>Complaint Registration App</h3>
+                                <p>Android application for registering and tracking grievances.</p>
+                                <div class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Click to flip</div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-card">
+                                <h3>Complaint Registration App</h3>
+                                <p>Multi-screen Android app with status tracking, basic validation, and categorized complaint submission.</p>
+                                <div class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Click to flip</div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- CARD 3 (example extra project) -->
+                <div class="flip-card">
+                    <input type="checkbox" id="proj3">
+                    <label for="proj3" class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-card">
+                                <div class="project-icon"><i class="fa-solid fa-database"></i></div>
+                                <h3>Library Management</h3>
+                                <p>Implements book issue/return, member records, and simple reports using file handling in C.</p>
+                                <div class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Click to flip</div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-card">
+                                <h3>Library Management</h3>
+                                <p>Implements library management system with file handling in C with issuing, returning books, and managing member records.</p>
+                                <div class="flip-hint"><i class="fa-solid fa-arrows-rotate"></i> Click to flip</div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section class="glass-card full-width">
+            <h2><i class="fa-solid fa-certificate"></i> Certifications (2024-2025)</h2>
+            <div class="cert-list">
+                <p><span>2025</span> 10-Day Python Workshop - IBM India</p>
+                <p><span>2024</span> Putzmeister Hackathon Participant</p>
+                <p><span>2024</span> Google Digital Marketing Certified</p>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+</body>
+</html>

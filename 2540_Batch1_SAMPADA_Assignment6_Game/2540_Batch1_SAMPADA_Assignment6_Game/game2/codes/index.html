@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Mini Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Pro Mini Game Hub</h1>
+        
+        <!-- HOME SCREEN -->
+        <div id="home" class="screen active">
+            <div class="games-menu">
+                <div class="menu-card" onclick="startGame('memory')">
+                    <div class="emoji">🧠</div>
+                    <div class="title">Memory Pattern</div>
+                </div>
+                <div class="menu-card" onclick="startGame('tictac')">
+                    <div class="emoji">❌⭕</div>
+                    <div class="title">Tic Tac Toe</div>
+                </div>
+                <div class="menu-card" onclick="startGame('cards')">
+                    <div class="emoji">🃏</div>
+                    <div class="title">Card Match</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEMORY GAME -->
+        <div id="memory" class="screen">
+            <button class="back-btn" onclick="goHome()">← Back</button>
+            <h2>🧠 Memory Pattern Game</h2>
+            
+            <div class="game-info">
+                <div class="info-box">
+                    <span class="label">Level:</span>
+                    <span class="value" id="memLevel">0</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">Score:</span>
+                    <span class="value" id="memScore">0</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-start" id="memStart">Start Game</button>
+                <button class="btn btn-reset" id="memReset">Reset</button>
+            </div>
+
+            <div class="memory-grid">
+                <div class="memory-box" data-color="green"></div>
+                <div class="memory-box" data-color="red"></div>
+                <div class="memory-box" data-color="yellow"></div>
+                <div class="memory-box" data-color="blue"></div>
+            </div>
+        </div>
+
+        <!-- TIC TAC TOE GAME -->
+        <div id="tictac" class="screen">
+            <button class="back-btn" onclick="goHome()">← Back</button>
+            <h2>❌⭕ Tic Tac Toe Game</h2>
+            
+            <div class="game-info">
+                <div class="info-box">
+                    <span class="label">X Wins:</span>
+                    <span class="value" id="xWins">0</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">O Wins:</span>
+                    <span class="value" id="oWins">0</span>
+                </div>
+                <div class="info-box">
+                    <span class="label">Turn:</span>
+                    <span class="value" id="currentTurn">X</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-start" id="ticStart">New Game</button>
+                <button class="btn btn-reset" id="ticReset">Reset Scores</button>
+            </div>
+
+            <div class="tictac-grid" id="ticBoard"></div>
+        </div>
+
+        <!-- CARD MATCH GAME -->
+        <div id="cards" class="screen">
+            <button class="back-btn" onclick="goHome()">← Back</button>
+            <h2>🃏 Card Match Game</h2>
+            
+            <div class="game-info">
+                <div class="info-box">
+                    <span class="label">Matches:</span>
+                    <span class="value" id="cardMatches">0</span>/10
+                </div>
+                <div class="info-box">
+                    <span class="label">Time:</span>
+                    <span class="value" id="cardTime">0</span>s
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-start" id="cardStart">New Game</button>
+                <button class="btn btn-reset" id="cardReset">Reset</button>
+            </div>
+
+            <div class="card-grid" id="cardBoard"></div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop volume="0.3">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.wav" type="audio/wav">
+    </audio>
+    <audio id="winSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-winning-chimes-2015.wav" type="audio/wav">
+    </audio>
+    <audio id="loseSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-player-losing-or-failing-2042.wav" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
